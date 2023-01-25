@@ -26,3 +26,4 @@ const interest = [
 ];
 
 const a1 = interest.filter((x) => x.score >= 50);
+const a2 = interest.map((x) => x.name.toUpperCase());
