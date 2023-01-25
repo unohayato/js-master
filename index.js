@@ -19,3 +19,14 @@ const person = {
 
 
 };
+
+const nums = [1, 2, 3, 4, 5];
+
+const f = (num) => {
+
+  return num + num;
+}
+
+nums.forEach((i) => {
+  console.log(f(i));
+});
