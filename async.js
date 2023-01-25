@@ -16,3 +16,35 @@ async function main() {
 }
 
 main();
+
+
+setTimeout(()=>{
+  console.log("Hello");
+
+}, 1000);
+
+
+const asyncHello = () =>
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Hello!");
+    resolve();
+  }, 1000);
+});
+
+asyncHello()
+  .then(() => asyncHello())
+  .then(() => asyncHello())
+  .then(() => asyncHello())
+  .catch((error) => {
+    console.log(error);
+  });
+
+
+const main = async () => {
+  await asyncHello();
+  await asyncHello();
+  await asyncHello();
+};
+
+main();
