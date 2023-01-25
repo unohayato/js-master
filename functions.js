@@ -11,3 +11,18 @@ const square = (num) => {
 }
 
 const square = num  => num * num;
+
+const interest = [
+  {
+    name: "soccer",
+    emoji: "⚽️",
+    score: 29,
+  },
+  {
+    name: "筋トレ",
+    emoji: "💪",
+    score: 50,
+  },
+];
+
+const a1 = interest.filter((x) => x.score >= 50);
